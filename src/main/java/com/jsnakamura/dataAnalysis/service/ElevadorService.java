@@ -1,11 +1,9 @@
 package com.jsnakamura.dataAnalysis.service;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import com.jsnakamura.dataAnalysis.entity.Answer;
 
@@ -36,6 +34,9 @@ public class ElevadorService implements IElevadorService {
 		});
 		
 		
+		
+		
+		
 		return null;
 	}
 
@@ -44,6 +45,22 @@ public class ElevadorService implements IElevadorService {
 		List<Character> mostUsedElevator;
 		Map<Character, Integer> counter = new HashMap<Character, Integer>();
 
+		answers
+		.stream()
+		.sorted(Comparator.comparingInt(Answer::getElevador))
+		.forEach(answer -> {
+
+			if (counter.containsKey(answer.getElevador())) {
+
+				counter.replace(answer.getElevador(), counter.get(answer.getElevador()) + 1);
+			} else {
+				counter.put(answer.getElevador(), 1);
+			}
+	});
+		
+		
+		
+		
 		return null;
 	}
 

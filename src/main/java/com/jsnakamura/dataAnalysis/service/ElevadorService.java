@@ -1,15 +1,18 @@
 package com.jsnakamura.dataAnalysis.service;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.jsnakamura.dataAnalysis.entity.Answer;
+import com.jsnakamura.dataAnalysis.helper.DataHelper;
 
 public class ElevadorService implements IElevadorService {
 
 	private List<Answer> answers;
+	private DataHelper dataHelper = new DataHelper();
 
 	public ElevadorService(List<Answer> answers) {
 		this.answers = answers;
@@ -17,50 +20,34 @@ public class ElevadorService implements IElevadorService {
 
 	public List<Integer> andarMenosUtilizado() {
 
-		List<Integer> lessUsedFloor;
-		Map<Integer, Integer> counter = new HashMap<Integer, Integer>();
+		List<Integer> lessUsedFloor = new ArrayList<Integer>();
 
-		answers
-			.stream()
-			.sorted(Comparator.comparingInt(Answer::getAndar))
-			.forEach(answer -> {
+		List<ArrayList<Answer>> listByFloors = dataHelper.getListByFloors(answers);
 
-				if (counter.containsKey(answer.getAndar())) {
-	
-					counter.replace(answer.getAndar(), counter.get(answer.getAndar()) + 1);
-				} else {
-					counter.put(answer.getAndar(), 1);
-				}
-		});
+		int size = 0;
 		
+		for (List<Answer> floor : listByFloors) {
+			if(lessUsedFloor.isEmpty()) {
+				lessUsedFloor.add(floor.get(0).getAndar());
+				size = floor.size();
+				
+			} else if(floor.size() < size) {
+				lessUsedFloor.clear();
+				lessUsedFloor.add(floor.get(0).getAndar());
+				size = floor.size();
+				
+			} else if(floor.size() == size) {
+				lessUsedFloor.add(floor.get(0).getAndar());
+			}
+		}
 		
-		
-		
-		
-		return null;
+		return lessUsedFloor;
 	}
 
 	public List<Character> elevadorMaisFrequentado() {
 
-		List<Character> mostUsedElevator;
-		Map<Character, Integer> counter = new HashMap<Character, Integer>();
+		
 
-		answers
-		.stream()
-		.sorted(Comparator.comparingInt(Answer::getElevador))
-		.forEach(answer -> {
-
-			if (counter.containsKey(answer.getElevador())) {
-
-				counter.replace(answer.getElevador(), counter.get(answer.getElevador()) + 1);
-			} else {
-				counter.put(answer.getElevador(), 1);
-			}
-	});
-		
-		
-		
-		
 		return null;
 	}
 
@@ -68,7 +55,7 @@ public class ElevadorService implements IElevadorService {
 
 		List<Character> mostUsedElevatorBiggestFlow;
 		Map<Character, Integer> counter = new HashMap<Character, Integer>();
-		
+
 		return null;
 	}
 
@@ -76,7 +63,7 @@ public class ElevadorService implements IElevadorService {
 
 		List<Character> leastUsedElevator;
 		Map<Character, Integer> counter = new HashMap<Character, Integer>();
-		
+
 		return null;
 	}
 
@@ -84,7 +71,7 @@ public class ElevadorService implements IElevadorService {
 
 		List<Character> leastUsedElevatorLowestFlow;
 		Map<Character, Integer> counter = new HashMap<Character, Integer>();
-		
+
 		return null;
 	}
 
@@ -92,7 +79,7 @@ public class ElevadorService implements IElevadorService {
 
 		List<Character> BiggestFlowElevatorSet;
 		Map<Character, Integer> counter = new HashMap<Character, Integer>();
-		
+
 		return null;
 	}
 

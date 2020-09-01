@@ -1,10 +1,12 @@
 package com.jsnakamura.dataAnalysis.helper;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.Reader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,29 +18,17 @@ public class DataHelper {
 
 	private Gson gson = new Gson();
 
-	public List<Answer> loadData() {
-
-		System.out.println("before input");
-
-
+	public List<Answer> loadData() throws FileNotFoundException {
 		
 		Answer[] answers;
 		
 		
 
-		try(Reader input = new FileReader("/DataAnalysis/src/main/resources/Input/input.json")) {
+		Reader input = new FileReader("../DataAnalysis/src/main/resources/Input/input.json");
 			
 			answers = gson.fromJson(input, Answer[].class);
-
-			System.out.println("Input read");
-
 		
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("n leu");
-		}
-		
-		return null;
+		return Arrays.asList(answers);
 
 	}
 

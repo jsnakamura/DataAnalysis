@@ -1,13 +1,10 @@
 package com.jsnakamura.dataAnalysis.helper;
 
-import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,17 +16,29 @@ public class DataHelper {
 
 	private Gson gson = new Gson();
 
-	public List<Answer> loadData() throws IOException {
+	public List<Answer> loadData() {
 
 		System.out.println("before input");
 
-		Path path = Paths.get("/DataAnalysis/src/main/resources/Input/input.json");
 
-		Reader input = new FileReader(path.toString());
+		
+		Answer[] answers;
+		
+		
 
-		System.out.println("Input read");
+		try(Reader input = new FileReader("/DataAnalysis/src/main/resources/Input/input.json")) {
+			
+			answers = gson.fromJson(input, Answer[].class);
 
-		return Arrays.asList(gson.fromJson(input, Answer[].class));
+			System.out.println("Input read");
+
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("n leu");
+		}
+		
+		return null;
 
 	}
 

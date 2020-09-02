@@ -68,36 +68,61 @@ public class ElevadorServiceTest {
 	@Test
 	public void percentualDeUsoElevadorATest() {
 		// GIVEN
+		float expected = (float) 0.31;
+		
 		// WHEN
+		float actual = service.percentualDeUsoElevadorA();
+		
 		// THEN
+		assertThat(actual, is(expected));
 	}
 
 	@Test
 	public void percentualDeUsoElevadorBTest() {
 		// GIVEN
-		// WHEN
-		// THEN
+				float expected = (float) 0.23;
+				
+				// WHEN
+				float actual = service.percentualDeUsoElevadorB();
+				
+				// THEN
+				assertThat(actual, is(expected));
 	}
 
 	@Test
 	public void percentualDeUsoElevadorCTest() {
 		// GIVEN
-		// WHEN
-		// THEN
+				float expected = (float) 0.15;
+				
+				// WHEN
+				float actual = service.percentualDeUsoElevadorC();
+				
+				// THEN
+				assertThat(actual, is(expected));
 	}
 
 	@Test
 	public void percentualDeUsoElevadorDTest() {
 		// GIVEN
-		// WHEN
-		// THEN
+				float expected = (float) 0.15;
+				
+				// WHEN
+				float actual = service.percentualDeUsoElevadorD();
+				
+				// THEN
+				assertThat(actual, is(expected));
 	}
 
 	@Test
 	public void percentualDeUsoElevadorETest() {
 		// GIVEN
-		// WHEN
-		// THEN
+				float expected = (float) 0.15;
+				
+				// WHEN
+				float actual = service.percentualDeUsoElevadorE();
+				
+				// THEN
+				assertThat(actual, is(expected));
 	}
 
 	@Test

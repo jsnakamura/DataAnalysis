@@ -5,8 +5,8 @@
     <classes>
       <class name="com.jsnakamura.dataAnalysis.service.ElevadorServiceTest">
         <methods>
+          <include name="percentualDeUsoElevadorATest"/>
           <include name="setUp"/>
-          <include name="periodoMenorFluxoElevadorMenosFrequentadoTest"/>
         </methods>
       </class> <!-- com.jsnakamura.dataAnalysis.service.ElevadorServiceTest -->
     </classes>

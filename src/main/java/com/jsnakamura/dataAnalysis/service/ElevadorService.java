@@ -339,7 +339,7 @@ public class ElevadorService implements IElevadorService {
 
 		elevatorAUsage = answers.stream().filter(answer -> answer.getElevador() == 'A').count();
 
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorAUsage / total));
+		return Float.valueOf(new DecimalFormat("#,##0.00").format(elevatorAUsage / total).replace(',', '.'));
 	}
 
 	public float percentualDeUsoElevadorB() {
@@ -351,7 +351,7 @@ public class ElevadorService implements IElevadorService {
 
 		elevatorBUsage = answers.stream().filter(answer -> answer.getElevador() == 'B').count();
 
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorBUsage / total));
+		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorBUsage / total).replace(',', '.'));
 	}
 
 	public float percentualDeUsoElevadorC() {
@@ -363,7 +363,7 @@ public class ElevadorService implements IElevadorService {
 
 		elevatorCUsage = answers.stream().filter(answer -> answer.getElevador() == 'C').count();
 
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorCUsage / total));
+		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorCUsage / total).replace(',', '.'));
 	}
 
 	public float percentualDeUsoElevadorD() {
@@ -375,7 +375,7 @@ public class ElevadorService implements IElevadorService {
 
 		elevatorDUsage = answers.stream().filter(answer -> answer.getElevador() == 'D').count();
 
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorDUsage / total));
+		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorDUsage / total).replace(',', '.'));
 	}
 
 	public float percentualDeUsoElevadorE() {
@@ -387,6 +387,6 @@ public class ElevadorService implements IElevadorService {
 
 		elevatorEUsage = answers.stream().filter(answer -> answer.getElevador() == 'E').count();
 
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorEUsage / total));
+		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorEUsage / total).replace(',', '.'));
 	}
 }

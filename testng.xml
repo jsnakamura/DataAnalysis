@@ -3,8 +3,7 @@
 <suite name="ElevadorServiceTestSuite" parallel="false">
 	<test name="ElevadorServiceTest">
 		<classes>
-			<class
-				name="com.jsnakamura.dataAnalysis.service.ElevadorServiceTest" />
+			<class name="com.jsnakamura.dataAnalysis.service.ElevadorServiceTest"/>
 		</classes>
 	</test>
 </suite>

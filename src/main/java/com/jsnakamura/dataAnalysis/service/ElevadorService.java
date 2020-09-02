@@ -6,12 +6,137 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.jsnakamura.dataAnalysis.entity.Answer;
-import com.jsnakamura.dataAnalysis.helper.DataHelper;
 
 public class ElevadorService implements IElevadorService {
 
 	private List<Answer> answers;
-	private DataHelper dataHelper = new DataHelper();
+
+	List<ArrayList<Answer>> getListByFloors() {
+
+		List<ArrayList<Answer>> result = new ArrayList<ArrayList<Answer>>();
+
+		ArrayList<Answer> floor0, floor1, floor2, floor3, floor4, floor5, floor6, floor7, floor8, floor9, floor10,
+				floor11, floor12, floor13, floor14, floor15;
+
+		floor0 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 0)
+				.collect(Collectors.toList());
+
+		floor1 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 1)
+				.collect(Collectors.toList());
+
+		floor2 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 2)
+				.collect(Collectors.toList());
+
+		floor3 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 3)
+				.collect(Collectors.toList());
+
+		floor4 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 4)
+				.collect(Collectors.toList());
+
+		floor5 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 5)
+				.collect(Collectors.toList());
+
+		floor6 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 6)
+				.collect(Collectors.toList());
+
+		floor7 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 7)
+				.collect(Collectors.toList());
+
+		floor8 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 8)
+				.collect(Collectors.toList());
+
+		floor9 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 9)
+				.collect(Collectors.toList());
+
+		floor10 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 10)
+				.collect(Collectors.toList());
+
+		floor11 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 11)
+				.collect(Collectors.toList());
+
+		floor12 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 12)
+				.collect(Collectors.toList());
+
+		floor13 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 13)
+				.collect(Collectors.toList());
+
+		floor14 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 14)
+				.collect(Collectors.toList());
+
+		floor15 = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getAndar() == 15)
+				.collect(Collectors.toList());
+
+		result.add(floor0);
+		result.add(floor1);
+		result.add(floor2);
+		result.add(floor3);
+		result.add(floor4);
+		result.add(floor5);
+		result.add(floor6);
+		result.add(floor7);
+		result.add(floor8);
+		result.add(floor9);
+		result.add(floor10);
+		result.add(floor11);
+		result.add(floor12);
+		result.add(floor13);
+		result.add(floor14);
+		result.add(floor15);
+
+		return result.stream().filter(list -> !list.isEmpty()).collect(Collectors.toList());
+	}
+
+	List<ArrayList<Answer>> getListByElevators() {
+
+		List<ArrayList<Answer>> result = new ArrayList<ArrayList<Answer>>();
+
+		ArrayList<Answer> elevatorA, elevatorB, elevatorC, elevatorD, elevatorE;
+
+		elevatorA = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getElevador() == 'A')
+				.collect(Collectors.toList());
+
+		elevatorB = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getElevador() == 'B')
+				.collect(Collectors.toList());
+
+		elevatorC = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getElevador() == 'C')
+				.collect(Collectors.toList());
+
+		elevatorD = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getElevador() == 'D')
+				.collect(Collectors.toList());
+
+		elevatorE = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getElevador() == 'E')
+				.collect(Collectors.toList());
+
+		result.add(elevatorA);
+		result.add(elevatorB);
+		result.add(elevatorC);
+		result.add(elevatorD);
+		result.add(elevatorE);
+
+		return result.stream().filter(list -> !list.isEmpty()).collect(Collectors.toList());
+	}
+
+	List<ArrayList<Answer>> getListByShifts() {
+
+		List<ArrayList<Answer>> result = new ArrayList<ArrayList<Answer>>();
+
+		ArrayList<Answer> morningShift, afternoonShift, eveningShift;
+
+		morningShift = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getTurno() == 'M')
+				.collect(Collectors.toList());
+
+		afternoonShift = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getTurno() == 'V')
+				.collect(Collectors.toList());
+
+		eveningShift = (ArrayList<Answer>) answers.stream().filter(answer -> answer.getTurno() == 'N')
+				.collect(Collectors.toList());
+
+		result.add(morningShift);
+		result.add(afternoonShift);
+		result.add(eveningShift);
+
+		return result.stream().filter(list -> !list.isEmpty()).collect(Collectors.toList());
+	}
 
 	public ElevadorService(List<Answer> answers) {
 		this.answers = answers;
@@ -21,7 +146,7 @@ public class ElevadorService implements IElevadorService {
 
 		List<Integer> lessUsedFloor = new ArrayList<Integer>();
 
-		List<ArrayList<Answer>> listByFloors = dataHelper.getListByFloors(answers);
+		List<ArrayList<Answer>> listByFloors = this.getListByFloors();
 
 		int count = 0;
 
@@ -47,7 +172,7 @@ public class ElevadorService implements IElevadorService {
 
 		List<Character> mostUsedElevator = new ArrayList<Character>();
 
-		List<ArrayList<Answer>> listByElevator = dataHelper.getListByElevators(answers);
+		List<ArrayList<Answer>> listByElevator = getListByElevators();
 
 		int count = 0;
 
@@ -115,7 +240,7 @@ public class ElevadorService implements IElevadorService {
 
 		List<Character> leastUsedElevator = new ArrayList<Character>();
 
-		List<ArrayList<Answer>> listByElevator = dataHelper.getListByElevators(answers);
+		List<ArrayList<Answer>> listByElevator = getListByElevators();
 
 		int count = 0;
 
@@ -157,11 +282,11 @@ public class ElevadorService implements IElevadorService {
 			for (Answer answer : completeLeastUsedElevators) {
 
 				if (answer.getTurno() == 'M') {
-					morningShift--;
+					morningShift++;
 				} else if (answer.getTurno() == 'V') {
-					afternoonShift--;
+					afternoonShift++;
 				} else if (answer.getTurno() == 'N') {
-					eveningShift--;
+					eveningShift++;
 				}
 			}
 
@@ -174,7 +299,6 @@ public class ElevadorService implements IElevadorService {
 			} else if ((eveningShift >= morningShift) && (eveningShift >= afternoonShift)) {
 				leastUsedElevatorLowestFlow.add('N');
 			}
-
 		}
 
 		return leastUsedElevatorLowestFlow;
@@ -184,8 +308,8 @@ public class ElevadorService implements IElevadorService {
 
 		List<Character> elevatorsBiggestFlow = new ArrayList<Character>();
 
-		List<ArrayList<Answer>> listByShifts = dataHelper.getListByShifts(answers);
-		
+		List<ArrayList<Answer>> listByShifts = getListByShifts();
+
 		int count = 0;
 
 		for (List<Answer> shifts : listByShifts) {
@@ -202,7 +326,7 @@ public class ElevadorService implements IElevadorService {
 				elevatorsBiggestFlow.add(shifts.get(0).getTurno());
 			}
 		}
-		
+
 		return elevatorsBiggestFlow;
 	}
 
@@ -210,59 +334,59 @@ public class ElevadorService implements IElevadorService {
 
 		float total;
 		float elevatorAUsage;
-		
+
 		total = answers.size();
-		
+
 		elevatorAUsage = answers.stream().filter(answer -> answer.getElevador() == 'A').count();
-		
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorAUsage/total));
+
+		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorAUsage / total));
 	}
 
 	public float percentualDeUsoElevadorB() {
-		
+
 		float total;
 		float elevatorBUsage;
-		
+
 		total = answers.size();
-		
+
 		elevatorBUsage = answers.stream().filter(answer -> answer.getElevador() == 'B').count();
-		
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorBUsage/total));
+
+		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorBUsage / total));
 	}
 
 	public float percentualDeUsoElevadorC() {
-		
+
 		float total;
 		float elevatorCUsage;
-		
+
 		total = answers.size();
-		
+
 		elevatorCUsage = answers.stream().filter(answer -> answer.getElevador() == 'C').count();
-		
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorCUsage/total));
+
+		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorCUsage / total));
 	}
 
 	public float percentualDeUsoElevadorD() {
-		
+
 		float total;
 		float elevatorDUsage;
-		
+
 		total = answers.size();
-		
+
 		elevatorDUsage = answers.stream().filter(answer -> answer.getElevador() == 'D').count();
-		
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorDUsage/total));
+
+		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorDUsage / total));
 	}
 
 	public float percentualDeUsoElevadorE() {
-		
+
 		float total;
 		float elevatorEUsage;
-		
+
 		total = answers.size();
-		
+
 		elevatorEUsage = answers.stream().filter(answer -> answer.getElevador() == 'E').count();
-		
-		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorEUsage/total));
+
+		return Float.parseFloat(new DecimalFormat("#,##0.00").format(elevatorEUsage / total));
 	}
 }

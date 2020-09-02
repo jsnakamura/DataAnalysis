@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ElevadorServiceTestSuite" parallel="false">
+	<test name="ElevadorServiceTest">
+		<classes>
+			<class
+				name="com.jsnakamura.dataAnalysis.service.ElevadorServiceTest" />
+		</classes>
+	</test>
+</suite>

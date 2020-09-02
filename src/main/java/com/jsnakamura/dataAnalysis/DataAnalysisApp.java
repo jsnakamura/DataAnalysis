@@ -1,6 +1,7 @@
 package com.jsnakamura.dataAnalysis;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.jsnakamura.dataAnalysis.entity.Answer;
@@ -10,10 +11,10 @@ public class DataAnalysisApp {
 	
 	public static void main(String[] args) throws IOException {
 	
-		DataHelper dataHelper = new DataHelper();
+		ArrayList<Integer> ints = null;
 		
-		List<Answer> answers = dataHelper.loadData();
-		
-		System.out.println(answers);
+		for (Integer inte : ints) {
+			System.out.println(inte);
+		}
 	}
 }

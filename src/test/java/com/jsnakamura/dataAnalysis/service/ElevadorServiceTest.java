@@ -6,7 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.google.common.collect.Lists;
@@ -14,150 +14,127 @@ import com.jsnakamura.dataAnalysis.entity.Answer;
 
 public class ElevadorServiceTest {
 
-	ArrayList<Answer> mockData;
-	ElevadorService service;
+	List<Answer> data;
+	IElevadorService service;
 
-	@BeforeTest
+	@BeforeMethod
 	public void setUp() {
 
-		mockData = Lists.newArrayList(new Answer(1, 'A', 'M'), new Answer(1, 'B', 'M'), new Answer(1, 'A', 'N'),
+		data = Lists.newArrayList(new Answer(1, 'A', 'M'), new Answer(1, 'B', 'M'), new Answer(1, 'A', 'N'),
 				new Answer(2, 'A', 'M'), new Answer(2, 'B', 'M'), new Answer(2, 'C', 'N'), new Answer(1, 'D', 'M'),
 				new Answer(1, 'A', 'V'), new Answer(3, 'B', 'N'), new Answer(3, 'E', 'M'), new Answer(2, 'C', 'N'),
 				new Answer(3, 'E', 'M'), new Answer(1, 'D', 'V'));
 
-		service = new ElevadorService(mockData);
+		service = new ElevadorService(data);
 	}
 
 	@Test
-	public void andarMenosUtilizadoTest() {
+	public void assert_Andar_Menos_utilizado_Expected_Behavior() {
 
-		// GIVEN
 		ArrayList<Integer> expected = Lists.newArrayList(3);
 
-		// WHEN
 		List<Integer> actual = service.andarMenosUtilizado();
 
-		// THEN
 		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void elevadorMaisFrequentadoTest() {
-		// GIVEN
+	public void assert_Elevador_Mais_Frequentado_Expected_Behavior() {
+
 		ArrayList<Character> expected = Lists.newArrayList('A');
 
-		// WHEN
 		List<Character> actual = service.elevadorMaisFrequentado();
 
-		// THEN
 		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void elevadorMenosFrequentadoTest() {
-		// GIVEN
+	public void assert_Elevador_Menor_Frequentado_Expected_Behavior() {
+
 		ArrayList<Character> expected = Lists.newArrayList('C', 'D', 'E');
 
-		// WHEN
 		List<Character> actual = service.elevadorMenosFrequentado();
 
-		// THEN
 		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void percentualDeUsoElevadorATest() {
-		// GIVEN
+	public void assert_Percentual_De_Uso_elevador_A_Expected_Behavior() {
+
 		float expected = (float) 0.31;
-		
-		// WHEN
+
 		float actual = service.percentualDeUsoElevadorA();
-		
-		// THEN
+
 		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void percentualDeUsoElevadorBTest() {
-		// GIVEN
-				float expected = (float) 0.23;
-				
-				// WHEN
-				float actual = service.percentualDeUsoElevadorB();
-				
-				// THEN
-				assertThat(actual, is(expected));
+	public void assert_Percentual_De_Uso_Elevador_B_Expected_Behavior() {
+
+		float expected = (float) 0.23;
+
+		float actual = service.percentualDeUsoElevadorB();
+
+		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void percentualDeUsoElevadorCTest() {
-		// GIVEN
-				float expected = (float) 0.15;
-				
-				// WHEN
-				float actual = service.percentualDeUsoElevadorC();
-				
-				// THEN
-				assertThat(actual, is(expected));
+	public void assert_Percentual_De_Uso_Elevador_C_Expected_Behavior() {
+
+		float expected = (float) 0.15;
+
+		float actual = service.percentualDeUsoElevadorC();
+
+		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void percentualDeUsoElevadorDTest() {
-		// GIVEN
-				float expected = (float) 0.15;
-				
-				// WHEN
-				float actual = service.percentualDeUsoElevadorD();
-				
-				// THEN
-				assertThat(actual, is(expected));
+	public void assert_Percentual_De_Uso_Elevador_D_Expected_Behavior() {
+
+		float expected = (float) 0.15;
+
+		float actual = service.percentualDeUsoElevadorD();
+
+		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void percentualDeUsoElevadorETest() {
-		// GIVEN
-				float expected = (float) 0.15;
-				
-				// WHEN
-				float actual = service.percentualDeUsoElevadorE();
-				
-				// THEN
-				assertThat(actual, is(expected));
+	public void assert_Percentual_De_Uso_Elevador_E_Expected_Behavior() {
+
+		float expected = (float) 0.15;
+
+		float actual = service.percentualDeUsoElevadorE();
+
+		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void periodoMaiorFluxoElevadorMaisFrequentadoTest() {
-		// GIVEN
+	public void assert_Periodo_Maior_Fluxo_Elevador_Mais_Frequentado_Expected_Behavior() {
+
 		ArrayList<Character> expected = Lists.newArrayList('M');
 
-		// WHEN
 		List<Character> actual = service.periodoMaiorFluxoElevadorMaisFrequentado();
 
-		// THEN
 		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void periodoMaiorUtilizacaoConjuntoElevadoresTest() {
-		// GIVEN
+	public void assert_Periodo_Maior_Utilizacao_Conjunto_Elevadores_Expected_Behavior() {
+
 		ArrayList<Character> expected = Lists.newArrayList('M');
 
-		// WHEN
 		List<Character> actual = service.periodoMaiorUtilizacaoConjuntoElevadores();
 
-		// THEN
 		assertThat(actual, is(expected));
 	}
 
 	@Test
-	public void periodoMenorFluxoElevadorMenosFrequentadoTest() {
-		// GIVEN
-		ArrayList<Character> expected = Lists.newArrayList('N', 'M', 'M');
+	public void assert_Periodo_Menor_Fluxo_Elevador_Menos_Frequentado_Expected_Behavior() {
 
-		// WHEN
+		ArrayList<Character> expected = Lists.newArrayList('M', 'N', 'V');
+
 		List<Character> actual = service.periodoMenorFluxoElevadorMenosFrequentado();
 
-		// THEN
 		assertThat(actual, is(expected));
 	}
 }

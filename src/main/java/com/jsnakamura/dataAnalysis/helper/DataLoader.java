@@ -9,7 +9,7 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.jsnakamura.dataAnalysis.entity.Answer;
 
-public class DataHelper {
+public class DataLoader {
 
 	private Gson gson = new Gson();
 

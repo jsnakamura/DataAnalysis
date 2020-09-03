@@ -2,59 +2,99 @@
 <testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-02T15:56:21 BRT" name="Default suite" finished-at="2020-09-02T15:56:21 BRT" duration-ms="78">
+  <suite started-at="2020-09-02T22:07:52 BRT" name="Default suite" finished-at="2020-09-02T22:07:52 BRT" duration-ms="65">
     <groups>
     </groups>
-    <test started-at="2020-09-02T15:56:21 BRT" name="Default test" finished-at="2020-09-02T15:56:21 BRT" duration-ms="78">
+    <test started-at="2020-09-02T22:07:52 BRT" name="Default test" finished-at="2020-09-02T22:07:52 BRT" duration-ms="65">
       <class name="com.jsnakamura.dataAnalysis.service.ElevadorServiceTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="setUp" finished-at="2020-09-02T15:56:21 BRT" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="andarMenosUtilizadoTest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="andarMenosUtilizadoTest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="9" status="PASS">
+        <test-method signature="assert_Andar_Menos_utilizado_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Andar_Menos_utilizado_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- andarMenosUtilizadoTest -->
-        <test-method signature="elevadorMaisFrequentadoTest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="elevadorMaisFrequentadoTest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="2" status="PASS">
+        </test-method> <!-- assert_Andar_Menos_utilizado_Expected_Behavior -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- elevadorMaisFrequentadoTest -->
-        <test-method signature="elevadorMenosFrequentadoTest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="elevadorMenosFrequentadoTest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="1" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="assert_Elevador_Mais_Frequentado_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Elevador_Mais_Frequentado_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- elevadorMenosFrequentadoTest -->
-        <test-method signature="percentualDeUsoElevadorATest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="percentualDeUsoElevadorATest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="3" status="PASS">
+        </test-method> <!-- assert_Elevador_Mais_Frequentado_Expected_Behavior -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- percentualDeUsoElevadorATest -->
-        <test-method signature="percentualDeUsoElevadorBTest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="percentualDeUsoElevadorBTest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="1" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="assert_Elevador_Menor_Frequentado_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Elevador_Menor_Frequentado_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- percentualDeUsoElevadorBTest -->
-        <test-method signature="percentualDeUsoElevadorCTest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="percentualDeUsoElevadorCTest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="1" status="PASS">
+        </test-method> <!-- assert_Elevador_Menor_Frequentado_Expected_Behavior -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- percentualDeUsoElevadorCTest -->
-        <test-method signature="percentualDeUsoElevadorDTest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="percentualDeUsoElevadorDTest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="1" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="assert_Percentual_De_Uso_Elevador_B_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Percentual_De_Uso_Elevador_B_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- percentualDeUsoElevadorDTest -->
-        <test-method signature="percentualDeUsoElevadorETest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="percentualDeUsoElevadorETest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="2" status="PASS">
+        </test-method> <!-- assert_Percentual_De_Uso_Elevador_B_Expected_Behavior -->
+        <test-method signature="assert_Percentual_De_Uso_Elevador_C_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Percentual_De_Uso_Elevador_C_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- percentualDeUsoElevadorETest -->
-        <test-method signature="periodoMaiorFluxoElevadorMaisFrequentadoTest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="periodoMaiorFluxoElevadorMaisFrequentadoTest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="1" status="PASS">
+        </test-method> <!-- assert_Percentual_De_Uso_Elevador_C_Expected_Behavior -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- periodoMaiorFluxoElevadorMaisFrequentadoTest -->
-        <test-method signature="periodoMaiorUtilizacaoConjuntoElevadoresTest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="periodoMaiorUtilizacaoConjuntoElevadoresTest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="2" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="assert_Percentual_De_Uso_Elevador_D_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Percentual_De_Uso_Elevador_D_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- periodoMaiorUtilizacaoConjuntoElevadoresTest -->
-        <test-method signature="periodoMenorFluxoElevadorMenosFrequentadoTest()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@186f8716]" started-at="2020-09-02T15:56:21 BRT" name="periodoMenorFluxoElevadorMenosFrequentadoTest" finished-at="2020-09-02T15:56:21 BRT" duration-ms="1" status="PASS">
+        </test-method> <!-- assert_Percentual_De_Uso_Elevador_D_Expected_Behavior -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- periodoMenorFluxoElevadorMenosFrequentadoTest -->
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="assert_Percentual_De_Uso_Elevador_E_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Percentual_De_Uso_Elevador_E_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assert_Percentual_De_Uso_Elevador_E_Expected_Behavior -->
+        <test-method signature="assert_Percentual_De_Uso_elevador_A_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Percentual_De_Uso_elevador_A_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assert_Percentual_De_Uso_elevador_A_Expected_Behavior -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="assert_Periodo_Maior_Fluxo_Elevador_Mais_Frequentado_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Periodo_Maior_Fluxo_Elevador_Mais_Frequentado_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assert_Periodo_Maior_Fluxo_Elevador_Mais_Frequentado_Expected_Behavior -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="assert_Periodo_Maior_Utilizacao_Conjunto_Elevadores_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Periodo_Maior_Utilizacao_Conjunto_Elevadores_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assert_Periodo_Maior_Utilizacao_Conjunto_Elevadores_Expected_Behavior -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="setUp" finished-at="2020-09-02T22:07:52 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="assert_Periodo_Menor_Fluxo_Elevador_Menos_Frequentado_Expected_Behavior()[pri:0, instance:com.jsnakamura.dataAnalysis.service.ElevadorServiceTest@2f54a33d]" started-at="2020-09-02T22:07:52 BRT" name="assert_Periodo_Menor_Fluxo_Elevador_Menos_Frequentado_Expected_Behavior" finished-at="2020-09-02T22:07:52 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assert_Periodo_Menor_Fluxo_Elevador_Menos_Frequentado_Expected_Behavior -->
       </class> <!-- com.jsnakamura.dataAnalysis.service.ElevadorServiceTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
